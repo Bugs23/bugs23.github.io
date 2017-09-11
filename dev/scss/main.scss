@@ -1,0 +1,335 @@
+/***************************************************
+COLORS
+***************************************************/
+
+$darkGray: #212121;
+$mediumGray: #303030;
+$white: #fff;
+$lightGray: rgba(200, 200, 200, 0.5);
+$teal: #00b8c3;
+$black: #000;
+$transparentWhite: rgba(255, 255, 255, .33);
+
+
+
+/***************************************************
+GENERAL
+***************************************************/
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	margin-bottom: 60px;
+	font-family: lato, sans-serif;
+	letter-spacing: 1px;
+}
+
+a {
+	text-decoration: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+.rotate-90-degrees {
+	transform: rotate(90deg);
+}
+
+.smoothTransition {
+	transition: all .3s ease-in-out;
+}
+
+
+
+/***************************************************
+SECTIONS
+***************************************************/
+
+.ru-section-header {
+	margin: 0 0 100px;
+}
+
+.ru-section-header-underline {
+	background: $lightGray;
+	width: 100px;
+	height: 1px;
+	margin: 30px auto;
+}
+
+.ru-section {
+	padding: 100px 0;
+	color: $white;
+}
+
+.ru-section-title {
+	color: $teal;
+}
+
+.ru-section-subheading {
+	font-size: 18px;
+	color: $white;
+}
+
+
+
+/***************************************************
+NAVIGATION
+***************************************************/
+
+nav {
+	box-shadow: 0 1px 5px $black;
+	background-color: $darkGray;
+	img {
+		margin-bottom: 12px;
+		max-width: 35px;
+		transition: all .5s ease-in-out;
+		&:focus {
+			transform: rotate(360deg);
+		}
+		&:hover {
+			transform: rotate(360deg);
+		}
+	}
+	a {
+		color: $white;
+	}
+	span {
+		&.icon-bar {
+			background-color: $teal;
+			padding: 1.5px;
+		}
+	}
+}
+
+.navbar-nav {
+	margin: 0 -15px;
+}
+
+.nav li a {
+	&:focus {
+		background-color: $teal;
+		color: $white;
+	}
+	&:hover {
+		background-color: $teal;
+		color: $white;
+	}
+}
+
+
+
+/***************************************************
+FOOTER
+***************************************************/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    color: #fff;
+    background-color: $darkGray;
+	p {
+	    display: inline-block;
+	    padding-top: 30px;
+	    padding-right: 10px;
+	    padding-left: 10px
+	}
+}
+
+
+
+/***************************************************
+LANDING
+***************************************************/
+
+.landing {
+	background-image: url(../../assets/images/imageLanding.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	color: $white;
+}
+
+.name {
+	position: absolute;
+	bottom: 40%;
+	right: 0;
+	left: 0;
+	h1 {
+		font-size: 112px;
+		margin: 0;
+	}
+	h2 {
+		margin: 0;
+		font-weight: 300;
+		font-size: 82px;
+	}
+	p {
+		font-size: 46px;
+		font-weight: 200;
+		letter-spacing: 5px;
+	}
+}
+
+.scroll-button-container {
+	width: 200px;
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	#introScrollButton {
+		font-size: 50px;
+		max-width: 20px;
+		max-height: 20px;
+		&:focus {
+			color: $teal;
+		}
+		&:hover {
+			color: $teal;
+		}
+	}
+}
+
+@media(max-width:767px) {
+	.name {
+		margin-top: 300px;
+		h1 {
+			font-size: 62px;
+		}
+		h2 {
+			font-size: 42px;
+		}
+		p {
+			font-size: 18px;
+		}
+	}
+}
+
+
+
+/***************************************************
+INTRO GREETING
+***************************************************/
+
+#intro-greeting {
+	background-color: $darkGray;
+}
+
+
+
+/***************************************************
+WHAT I DO
+***************************************************/
+
+#what-i-do {
+	background-color: $mediumGray;
+	.icon-block {
+		background-color: $darkGray;
+		padding: 50px 20px 20px;
+		height: 315px;
+	}
+
+	.icon-block-icon {
+		color: $teal;
+		font-size: 45px;
+	}
+}
+
+
+
+/***************************************************
+PORTFOLIO
+***************************************************/
+
+#portfolioSection {
+	background-color: $darkGray;
+	color: $white;
+	.flex-container {
+		display: flex;
+		flex-flow: row wrap;
+		max-width: 1170px;
+		margin: 0 auto;
+	}
+	.flex-item {
+		width: 300px;
+		height: 300px;
+		flex: auto;
+		margin: 20px;
+		overflow: hidden;
+		position: relative;
+		img {
+			width: 100%;
+		}
+	}
+	.overlay {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 1;
+		background-color: $mediumGray;
+	}
+	.overlay-text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		color: $white;
+		transform: translate(-50%, -50%);
+	}
+	.overlay-underline {
+		background: $lightGray;
+		width: 225px;
+		height: 1px;
+		margin: 20px auto;
+	}
+}
+
+@media(min-width: 695px) {
+	#portfolioSection {
+		.overlay {
+			opacity: 0;
+		}
+		.flex-item:hover .overlay {
+			opacity: 1;
+		}
+	}
+}
+
+
+
+/***************************************************
+SOCIAL
+***************************************************/
+
+#contactSection {
+	background-color: $mediumGray;
+	.social-links {
+		li {
+			margin: 10px;
+		}
+		a {
+			width: 70px;
+			height: 70px;
+			display: block;
+			line-height: 67px;
+			border: 1px solid $transparentWhite;
+			border-radius: 5px;
+			font-size: 30px;
+			color: $white;
+			&:hover {
+				border-color: $teal;
+				i {
+					color: $teal;
+				}
+			}
+		}
+	}
+}
