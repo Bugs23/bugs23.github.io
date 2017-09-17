@@ -178,6 +178,12 @@ PORTFOLIO
 #portfolioSection {
   background-color: #212121;
   color: #fff; }
+  #portfolioSection .portfolio-category-btn {
+    padding-bottom: 5px; }
+    #portfolioSection .portfolio-category-btn:hover {
+      cursor: pointer; }
+  #portfolioSection .category-btn-active {
+    border-bottom: 1px solid #00b8c3; }
   #portfolioSection .flex-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -221,12 +227,11 @@ PORTFOLIO
     width: 225px;
     height: 1px;
     margin: 20px auto; }
-
-@media (min-width: 695px) {
-  #portfolioSection .overlay {
-    opacity: 0; }
-  #portfolioSection .flex-item:hover .overlay {
-    opacity: 1; } }
+  @media (min-width: 695px) {
+    #portfolioSection .overlay {
+      opacity: 0; }
+    #portfolioSection .overlay:hover {
+      opacity: 1; } }
 
 /***************************************************
 SOCIAL

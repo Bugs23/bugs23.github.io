@@ -249,6 +249,15 @@ PORTFOLIO
 #portfolioSection {
 	background-color: $darkGray;
 	color: $white;
+	.portfolio-category-btn {
+		padding-bottom: 5px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.category-btn-active {
+		border-bottom: 1px solid $teal;
+	}
 	.flex-container {
 		display: flex;
 		flex-flow: row wrap;
@@ -290,14 +299,11 @@ PORTFOLIO
 		height: 1px;
 		margin: 20px auto;
 	}
-}
-
-@media(min-width: 695px) {
-	#portfolioSection {
+	@media(min-width: 695px) {
 		.overlay {
 			opacity: 0;
 		}
-		.flex-item:hover .overlay {
+		.overlay:hover  {
 			opacity: 1;
 		}
 	}
@@ -333,3 +339,12 @@ SOCIAL
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
