@@ -12,7 +12,9 @@ var sass = require('gulp-sass'),
 // Compile sass
 gulp.task('sass', function() {
   	return gulp.src('dev/scss/main.scss')
-	    .pipe(sass())
+	    .pipe(sass({
+	    	outputStyle: 'compressed'
+	    }))
 	    .pipe(prefix('last 2 versions'))
 	    .pipe(gulp.dest('assets/css'))
 	    .pipe(connect.reload());
