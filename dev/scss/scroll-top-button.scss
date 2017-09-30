@@ -1,0 +1,30 @@
+.scrollUp-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    opacity: .5;
+    
+    &:hover {
+        opacity: 1;
+        a {
+            color: $white;
+        }
+    }
+
+    a {
+        width: 60px;
+        height: 60px;
+        display: block;
+        border: 3px solid $teal;
+        border-radius: 5px;
+        font-size: 28px;
+        color: $white;
+        &:focus {
+            color: $white;
+        }
+    }
+
+    .glyphicon {
+        line-height: 2.1;
+    }
+}
