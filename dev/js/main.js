@@ -39,9 +39,9 @@ INTRO SCROLL TO
 		$("#introScrollButton").click(function(e) {
 			// Prevent browser from jumping to the anchor when clicked 
 			e.preventDefault();
-			$('html, body').animate({ scrollTop: $("#intro-greeting").offset().top - 50}, 1000);
+			$('html, body').animate({ scrollTop: $("#intro-greeting").offset().top }, 1000);
 		});
-	});
+	})
 
 
 

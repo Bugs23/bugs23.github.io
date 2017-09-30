@@ -41,7 +41,7 @@ INTRO SCROLL TO
 			e.preventDefault();
 			$('html, body').animate({ scrollTop: $("#intro-greeting").offset().top }, 1000);
 		});
-	});
+	})
 
 
 
