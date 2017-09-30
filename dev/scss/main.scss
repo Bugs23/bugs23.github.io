@@ -110,6 +110,10 @@ nav {
 	margin: 0 -15px;
 }
 
+.navbar {
+	min-height: 0;
+}
+
 .nav li a {
 	&:focus {
 		background-color: $teal;
