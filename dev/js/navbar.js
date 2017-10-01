@@ -2,7 +2,6 @@
     var didScroll;
     var $navbar = $('nav');
     var $scrollPosition = $(window).scrollTop();
-    var $landingImgHt = $('.landing').innerHeight();
 
     // On scroll, set did scroll to true
     $(window).scroll(function() {
@@ -22,13 +21,10 @@
         var currentScrollPosition = $(window).scrollTop();
 
             // If the current scroll position is more than the previous scroll position hide the navbar
-            if (currentScrollPosition > $landingImgHt && currentScrollPosition > $scrollPosition) {
-                $navbar.slideUp('fast');
+            if (currentScrollPosition > $scrollPosition) {
+                $navbar.addClass('navbar-scroll');
             } else {
-                $navbar.slideDown('fast');
+                $navbar.removeClass('navbar-scroll');
             }
-
-            // Set the previous scroll position to this current scroll position
-            $scrollPosition = currentScrollPosition;
     }
 })(jQuery);
