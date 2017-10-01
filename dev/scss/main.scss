@@ -25,7 +25,6 @@ body {
 	margin-bottom: 60px;
 	font-family: lato, sans-serif;
 	letter-spacing: 1px;
-	font-weight: 100;
 }
 
 a {
@@ -82,46 +81,74 @@ NAVIGATION
 ***************************************************/
 
 nav {
-	box-shadow: 0 1px 5px $black;
-	background-color: $darkGray;
+	background-color: transparent;
 	img {
 		margin-bottom: 12px;
-		max-width: 35px;
-		transition: all .5s ease-in-out;
-		&:focus {
-			transform: rotate(360deg);
-		}
-		&:hover {
-			transform: rotate(360deg);
-		}
+		max-width: 45px;
 	}
 	a {
 		color: $white;
 	}
-	span {
-		&.icon-bar {
-			background-color: $teal;
-			padding: 1.5px;
+
+	.glyphicon-menu-hamburger {
+			color: $teal;
+			font-size: 30px;
+	}
+
+	@media(min-width:768px) {
+		.navbar-nav > li > a {
+		    padding-top: 21px;
+		    padding-bottom: 21px;
 		}
+		.navbar-brand {
+	    	height: 60px;
+	    }
 	}
 }
 
 .navbar-nav {
 	margin: 0 -15px;
+	@media(min-width:768px) {
+		.navbar-brand {
+	    	height: 60px;
+	    }
+	}
 }
 
 .navbar {
 	min-height: 0;
 }
 
-.nav li a {
-	&:focus {
-		background-color: $teal;
-		color: $white;
+.navbar-scroll {
+	background-color: $darkGray;
+	box-shadow: 0 1px 5px $black;
+}
+
+.navbar-toggle {
+    padding: 5px 10px;
+}
+
+.navbar-collapse {
+	background-color: $mediumGray;
+	border-top: none;
+	
+	@media(min-width: 768px) {
+		background-color: transparent;
 	}
-	&:hover {
-		background-color: $teal;
-		color: $white;
+
+	.nav li a {
+		&:focus {
+			background-color: $teal;
+			color: $white;
+		}
+		&:hover {
+			background-color: $teal;
+			color: $white;
+		}
+		@media(max-width: 768px) {
+			padding-top: 21px;
+			padding-bottom: 21px;
+		}
 	}
 }
 
@@ -161,20 +188,30 @@ LANDING
 	z-index: 1;
 }
 
+.landing:after {
+    background-color: #fff;
+    display: block;
+    opacity: 1;
+}
+
 .name {
 	position: absolute;
 	bottom: 40%;
 	right: 0;
 	left: 0;
+	text-shadow: -2px 0 3px #000;
+
 	h1 {
 		font-size: 112px;
 		margin: 0;
 	}
+
 	h2 {
 		margin: 0;
 		font-weight: 300;
 		font-size: 82px;
 	}
+
 	p {
 		font-size: 46px;
 		font-weight: 200;
@@ -188,6 +225,7 @@ LANDING
 	right: 0;
 	left: 0;
 	bottom: 0;
+
 	#introScrollButton {
 		font-size: 50px;
 		max-width: 20px;
@@ -204,12 +242,15 @@ LANDING
 @media(max-width:767px) {
 	.name {
 		margin-top: 300px;
+
 		h1 {
 			font-size: 62px;
 		}
+
 		h2 {
 			font-size: 42px;
 		}
+
 		p {
 			font-size: 18px;
 		}
@@ -281,6 +322,7 @@ PORTFOLIO
 			width: 100%;
 		}
 	}
+
 	.overlay {
 		position: absolute;
 		top: 0;
@@ -292,6 +334,7 @@ PORTFOLIO
 		opacity: 1;
 		background-color: $mediumGray;
 	}
+
 	.overlay-text {
 		position: absolute;
 		top: 50%;
@@ -299,12 +342,14 @@ PORTFOLIO
 		color: $white;
 		transform: translate(-50%, -50%);
 	}
+
 	.overlay-underline {
 		background: $lightGray;
 		width: 225px;
 		height: 1px;
 		margin: 20px auto;
 	}
+
 	@media(min-width: 695px) {
 		.overlay {
 			opacity: 0;
@@ -323,10 +368,12 @@ SOCIAL
 
 #contactSection {
 	background-color: $mediumGray;
+
 	.social-links {
 		li {
 			margin: 10px;
 		}
+
 		a {
 			width: 70px;
 			height: 70px;
