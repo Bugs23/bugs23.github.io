@@ -321,7 +321,7 @@ PORTFOLIO
 		background-color: rgba(33, 33, 33, 0.8);
 	}
 
-	.overlay:hover  {
+	.overlay:hover, .overlay:focus  {
 		opacity: 1;
 	}
 
