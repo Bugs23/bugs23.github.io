@@ -339,6 +339,12 @@ PORTFOLIO
 		height: 1px;
 		margin: 20px auto;
 	}
+
+	@media(max-width: 767px) {
+		.overlay {
+			opacity: 1;
+		}
+	}
 }
 
 
