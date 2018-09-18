@@ -18,10 +18,6 @@ PROJECT PAGE
     .btn {
         margin-top: 10px;
     }
-
-    img {
-        margin: 0 auto;
-    }
 }
 
 .project-links {
@@ -43,6 +39,18 @@ PROJECT PAGE
         &:hover {
             border-color: $teal;
             color: $teal;
+        }
+    }
+}
+
+.project-image {
+    img {
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    @media(max-width: 767px) {
+        img {
+            margin-bottom: 20px;
         }
     }
 }
